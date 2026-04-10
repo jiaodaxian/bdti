@@ -736,8 +736,9 @@
                 description: "你是乐队的<strong>技术天花板</strong>，也是<strong>社交地下室</strong>。你能弹所有风格的solo，记得住所有复杂的拍号，但你可能太专注于技术而忘了音乐是用来享受的。队友既崇拜你又害怕你，因为你总是说'这段很简单啊'。<br><br><strong>你的经典语录：</strong>\"这个拍号是13/8，很简单啊...\" \"你们先排，我去看会儿谱...\" \"这个音阶我6岁就练熟了...\"",
                 warning: "你可能会因为太追求完美而找不到队友。建议：偶尔弹错几个音，让队友感觉好一点。",
                 condition: {
-                    "tech": { "min": 20 },
-                    "chaos": { "max": 15 }
+                    "tech": { "min": 22 },
+                    "chaos": { "max": 12 },
+                    "late": { "max": 10 }
                 }
             },
             {
@@ -749,8 +750,8 @@
                 description: "你是乐队的<strong>不稳定因素</strong>，也是<strong>灵感源泉</strong>。你永远不知道排练会发生什么——可能是一场精彩的即兴，也可能是一场灾难。你迟到、你忘谱、你在台上做疯狂的事，但观众就是爱你。你是那种让队友又爱又恨的存在。<br><br><strong>你的经典语录：</strong>\"我觉得这段应该更自由一点...\" \"谱子？我不看谱子的...\" \"刚才那段我是即兴的，你们跟上啊...\"",
                 warning: "乐队正在考虑找替补。建议：设个闹钟，少喝点，演出前别吃蘑菇。",
                 condition: {
-                    "chaos": { "min": 20 },
-                    "late": { "min": 15 }
+                    "chaos": { "min": 18 },
+                    "late": { "min": 12 }
                 }
             },
             {
@@ -762,8 +763,8 @@
                 description: "你是乐队的<strong>绝对中心</strong>（至少在你心里是）。你有最复杂的编曲要求、最挑剔的音响标准、最多的情绪起伏。你觉得乐队是你的 backing band，队友是你的伴奏。但不得不承认，你的舞台魅力确实能hold住全场。<br><br><strong>你的经典语录：</strong>\"我的监听里听不到我自己...\" \"这段编曲不够突出我...\" \"你们先排，我去补个妆...\"",
                 warning: "队友正在私下讨论'没有主唱的乐队'。建议：学会感谢队友，偶尔请他们喝杯水。",
                 condition: {
-                    "narc": { "min": 20 },
-                    "tech": { "max": 18 }
+                    "narc": { "min": 18 },
+                    "tech": { "max": 20 }
                 }
             },
             {
@@ -775,9 +776,9 @@
                 description: "你是乐队的<strong>神秘第六人</strong>（虽然乐队只有5个人）。你准时到、准时走、技术稳定、从不惹事，但...没人记得你说过什么。你在台上站在最暗的角落，照片里被音箱挡住，群里发言没人回。你是<strong>最好的队友</strong>，也是最<strong>容易被遗忘的队友</strong>。<br><br><strong>你的经典语录：</strong>\"...\"（基本不说话）",
                 warning: "你可能已经被踢出群了，只是还没人告诉你。建议：偶尔发一次火，让队友知道你还活着。",
                 condition: {
-                    "team": { "min": 20 },
-                    "narc": { "max": 10 },
-                    "chaos": { "max": 10 }
+                    "team": { "min": 18 },
+                    "narc": { "max": 12 },
+                    "chaos": { "max": 12 }
                 }
             },
             {
@@ -845,9 +846,9 @@
                 description: "你是乐队的<strong>粘合剂</strong>。当主唱和吉他吵架时你劝架，当鼓手喝多时你叫车，当演出费分配不均时你让出自己的那份。你技术中规中矩，但<strong>情商爆表</strong>。没有你的乐队早就解散了，但没人意识到这一点。<br><br><strong>你的经典语录：</strong>\"算了算了，都消消气...\" \"我少拿点没事，大家开心最重要...\" \"鼓手喝多了，我先送他回去...\"",
                 warning: "你正在积累 resentment。建议：偶尔发一次火，让队友知道你的重要性。",
                 condition: {
-                    "team": { "min": 22 },
-                    "chaos": { "max": 12 },
-                    "narc": { "max": 12 }
+                    "team": { "min": 20 },
+                    "chaos": { "max": 15 },
+                    "narc": { "max": 15 }
                 }
             },
             {
@@ -889,8 +890,8 @@
                 description: "你是乐队的<strong>现场之王</strong>。你可能弹得不是最准的，唱得不是最好的，但观众就是爱你。你会跳下舞台、会互动、会讲段子、会在台上做俯卧撑。你是<strong>表演型人格</strong>的完美体现，队友的技术为你服务。<br><br><strong>你的经典语录：</strong>\"大家一起跳起来！\" \"下面那排，我看见你了！\" \"这段我要走到观众中间！\"",
                 warning: "队友觉得你在抢戏。建议：确保技术先过关，别在台上摔断腿。",
                 condition: {
-                    "chaos": { "min": 18 },
-                    "narc": { "min": 15 },
+                    "chaos": { "min": 20 },
+                    "narc": { "min": 18 },
                     "tech": { "max": 18 }
                 }
             },
@@ -917,9 +918,10 @@
                 description: "你是乐队的<strong>CEO</strong>。你有详细的五年计划，每天发10条排练提醒，凌晨3点还在改歌。你把乐队当公司经营，队友是你的员工，演出是你的业绩。你可能会成功，也可能会累死。<br><br><strong>你的经典语录：</strong>\"我们需要KPI...\" \"这个月演出量不够...\" \"周末加排，大家都到...\"",
                 warning: "你正在失去生活。建议：偶尔休息，别把乐队变成第二份工作。",
                 condition: {
-                    "tech": { "min": 18 },
-                    "team": { "min": 15 },
-                    "late": { "max": 10 }
+                    "tech": { "min": 20 },
+                    "team": { "min": 18 },
+                    "late": { "max": 8 },
+                    "chaos": { "max": 12 }
                 }
             },
             {
@@ -945,9 +947,289 @@
                 description: "你是乐队的<strong>质量控制官</strong>。你会为了一个音符练100遍，会因为一个错音重排整个段落，会在演出前紧张到呕吐。你的演出永远不会出错，但也永远不会有惊喜。你是技术的典范，也是队友的噩梦。<br><br><strong>你的经典语录：</strong>\"这里错了，再来一遍...\" \"这个音色不对...\" \"我们还没准备好，取消演出...\"",
                 warning: "你可能会把队友逼疯。建议：偶尔接受不完美，音乐是有灵魂的。",
                 condition: {
-                    "tech": { "min": 20 },
+                    "tech": { "min": 18 },
+                    "chaos": { "max": 12 },
+                    "late": { "max": 12 }
+                }
+            },
+            {
+                id: "foodie",
+                name: "FOODIE吃货",
+                emoji: "🍔🎸",
+                subtitle: "排练是次要的，吃什么才是重点",
+                image: "images/foodie.png",
+                description: "你是乐队的<strong>美食顾问</strong>。每次排练前你都会问'今天吃什么'，排练时你会提议'休息一下点外卖'，演出后你会组织'庆功宴'。你对附近所有餐馆了如指掌，对演出地点的美食地图倒背如流。音乐？那是吃饭时的背景音乐。<br><br><strong>你的经典语录：</strong>\"今天排练完去吃烧烤吧...\" \"这个场地的外卖不好吃，换个地方...\" \"演出前我得先垫垫肚子...\"",
+                warning: "你可能会吃胖到影响演出。建议：控制食量，别在演出前吃太多。",
+                condition: {
+                    "chaos": { "min": 15 },
+                    "team": { "min": 10 },
+                    "late": { "min": 10 }
+                }
+            },
+            {
+                id: "memer",
+                name: "MEME梗王",
+                emoji: "😂🎸",
+                subtitle: "把乐队变成大型玩梗现场",
+                image: "images/memer.png",
+                description: "你是乐队的<strong>娱乐总监</strong>。你把所有歌词都改成梗，把所有solo都编成段子，把所有演出都变成喜剧现场。观众来看你们演出不是为了音乐，是为了笑。你让乐队氛围轻松愉快，但也让音乐变得不那么严肃。<br><br><strong>你的经典语录：</strong>\"这个段子能加进歌里...\" \"我们应该翻唱《孤勇者》但改成《孤泳者》...\" \"刚才那个梗观众没接住，再来一遍...\"",
+                warning: "队友担心乐队变成搞笑团体。建议：偶尔正经演首歌，证明你们还是搞音乐的。",
+                condition: {
+                    "chaos": { "min": 20 },
+                    "narc": { "min": 10 },
+                    "team": { "min": 10 }
+                }
+            },
+            {
+                id: "vlogger",
+                name: "VLOGGER博主",
+                emoji: "📱🎸",
+                subtitle: "乐队是内容素材，演出是直播现场",
+                image: "images/vlogger.png",
+                description: "你是乐队的<strong>媒体专员</strong>。你拍排练日常、拍演出后台、拍成员八卦，把乐队的一切都做成vlog。你关心点赞数、评论量、粉丝增长，至于音乐质量...那是次要的。你让乐队有了曝光度，也让排练变得像拍戏。<br><br><strong>你的经典语录：</strong>\"大家看镜头！\" \"刚才那段没拍好，再来一遍...\" \"这个角度拍出来好看...\"",
+                warning: "队友觉得你在消费乐队。建议：平衡内容创作和音乐本身，别把所有时间都用来拍视频。",
+                condition: {
+                    "narc": { "min": 18 },
+                    "chaos": { "min": 10 },
+                    "team": { "max": 15 }
+                }
+            },
+            {
+                id: "procrastinator",
+                name: "PROC拖延症晚期",
+                emoji: "⏰🎸",
+                subtitle: "永远在最后一刻完成任务",
+                image: "images/procrastinator.png",
+                description: "你是乐队的<strong>极限挑战专家</strong>。你会在演出前一天才练歌，在deadline前一小时才交歌，在排练前五分钟才起床。你总是说'来得及'，但每次都让队友提心吊胆。奇迹般地，你每次都能完成任务，但过程极其痛苦。<br><br><strong>你的经典语录：</strong>\"明天再练...\" \"来得及，我通宵就行...\" \"放心，我有灵感了...\"",
+                warning: "你可能会在关键时刻掉链子。建议：制定时间表，提前完成任务，别总挑战极限。",
+                condition: {
+                    "late": { "min": 20 },
+                    "chaos": { "min": 15 },
+                    "tech": { "max": 15 }
+                }
+            },
+            {
+                id: "fashion",
+                name: "FASHION时尚达人",
+                emoji: "👗🎸",
+                subtitle: "衣服比音乐重要，造型比技术关键",
+                image: "images/fashion.png",
+                description: "你是乐队的<strong>造型师</strong>。你每天都有新造型，每次演出都要搭配不同的服装，你关心流行趋势、颜色搭配、品牌效应。你让乐队看起来像偶像团体，而不是摇滚乐队。音乐？那是时尚的背景音乐。<br><br><strong>你的经典语录：</strong>\"这个颜色和舞台不搭...\" \"我的衣服还没到，演出延期...\" \"我们应该统一着装...\"",
+                warning: "队友觉得你本末倒置。建议：先练好听力，再考虑造型，音乐才是核心。",
+                condition: {
+                    "narc": { "min": 20 },
+                    "late": { "min": 10 },
+                    "tech": { "max": 15 }
+                }
+            },
+            {
+                id: "gamer",
+                name: "GAMER游戏迷",
+                emoji: "🎮🎸",
+                subtitle: "组乐队是为了能和朋友一起玩游戏",
+                image: "images/gamer.png",
+                description: "你是乐队的<strong>娱乐委员</strong>。排练前你会打游戏，排练间隙你会打游戏，排练后你会打游戏。你把游戏术语用在音乐里，把游戏音效加进编曲，把演出当成游戏副本。你让乐队氛围轻松，但也让排练效率低下。<br><br><strong>你的经典语录：</strong>\"排练前先开一把...\" \"这段像游戏里的BOSS战音乐...\" \"演出就是我们的团战...\"",
+                warning: "你可能会因为打游戏错过演出。建议：控制游戏时间，把音乐放在第一位。",
+                condition: {
+                    "chaos": { "min": 15 },
+                    "late": { "min": 15 },
+                    "team": { "min": 10 }
+                }
+            },
+            {
+                id: "parent",
+                name: "PARENT奶爸/奶妈",
+                emoji: "👶🎸",
+                subtitle: "乐队是副业，带娃是主业",
+                image: "images/parent.png",
+                description: "你是乐队的<strong>时间管理大师</strong>。你要兼顾带娃、工作、排练，时间精确到分钟。你会在排练时接孩子电话，在演出前给孩子喂奶，在创作时想着孩子的学费。你让乐队成员懂得责任的重要性，也让他们感受到家庭的温暖。<br><br><strong>你的经典语录：</strong>\"排练得早点结束，孩子要睡觉...\" \"这个调太高，我怕把孩子吵醒...\" \"演出费要存起来给孩子买奶粉...\"",
+                warning: "你可能会因为家庭原因影响乐队活动。建议：和队友沟通好时间，找到家庭和乐队的平衡点。",
+                condition: {
+                    "team": { "min": 18 },
+                    "late": { "max": 10 },
+                    "chaos": { "max": 10 }
+                }
+            },
+            {
+                id: "fitness",
+                name: "FITNESS健身狂魔",
+                emoji: "💪🎸",
+                subtitle: "音乐要躁，肌肉要爆",
+                image: "images/fitness.png",
+                description: "你是乐队的<strong>体能教练</strong>。你在排练间隙做俯卧撑，在演出前做热身，在创作时举哑铃。你把健身理念融入音乐，认为好的体能是演出的基础。你让乐队成员保持健康，但也让排练变得像健身课。<br><br><strong>你的经典语录：</strong>\"排练前先做组深蹲...\" \"这段solo需要核心发力...\" \"演出完我们去跑步...\"",
+                warning: "队友觉得你过度健身影响音乐。建议：平衡健身和音乐，别在台上秀肌肉影响演出。",
+                condition: {
+                    "tech": { "min": 15 },
+                    "team": { "min": 10 },
+                    "late": { "max": 10 }
+                }
+            },
+            {
+                id: "student",
+                name: "STUDENT学生党",
+                emoji: "📚🎸",
+                subtitle: "乐队是爱好，考试才是命根",
+                image: "images/student.png",
+                description: "你是乐队的<strong>时间分配专家</strong>。你要兼顾学业和乐队，经常在排练时背着书包，在演出前复习功课，在创作时想着考试。你让乐队成员感受到青春的活力，也让他们回忆起学生时代的美好。<br><br><strong>你的经典语录：</strong>\"排练得早点，我要复习...\" \"这首歌的节奏像数学题...\" \"演出完我得赶回去写作业...\"",
+                warning: "你可能会因为考试错过重要演出。建议：合理安排时间，平衡学业和乐队活动。",
+                condition: {
+                    "team": { "min": 15 },
+                    "tech": { "min": 10 },
+                    "late": { "max": 15 }
+                }
+            },
+            {
+                id: "retired",
+                name: "RETIRED退休玩家",
+                emoji: "☕🎸",
+                subtitle: "玩不动了，只想享受音乐",
+                image: "images/retired.png",
+                description: "你是乐队的<strong>佛系成员</strong>。你不再追求名利，不再熬夜排练，不再疯狂演出。你只是想和朋友一起玩音乐，享受过程，不计较结果。你让乐队氛围变得轻松，也让年轻成员懂得音乐的本质。<br><br><strong>你的经典语录：</strong>\"随便玩，开心就好...\" \"太晚了，我要回家睡觉...\" \"以前我们玩音乐是为了梦想，现在是为了快乐...\"",
+                warning: "你可能会因为体力不支影响演出。建议：保持适度练习，别完全松懈。",
+                condition: {
+                    "team": { "min": 15 },
                     "chaos": { "max": 10 },
                     "late": { "max": 10 }
+                }
+            },
+            {
+                id: "hypeman",
+                name: "HYPEMAN气氛担当",
+                emoji: "🤙🎸",
+                subtitle: "不唱歌不弹琴，专门负责喊麦",
+                image: "images/hypeman.png",
+                description: "你是乐队的<strong>互动专家</strong>。你不弹乐器，不唱歌，专门负责在演出时调动观众情绪，喊口号，带动气氛。你是乐队和观众之间的桥梁，让演出变得更有互动性。你让乐队演出更热闹，也让自己成为舞台焦点。<br><br><strong>你的经典语录：</strong>\"让我听到你们的声音！\" \"左边的朋友！右边的朋友！\" \"燥起来！\"",
+                warning: "队友觉得你抢了风头。建议：适度互动，别让观众忘记这是乐队演出。",
+                condition: {
+                    "narc": { "min": 18 },
+                    "chaos": { "min": 18 },
+                    "tech": { "max": 10 }
+                }
+            },
+            {
+                id: "nerd",
+                name: "NERD技术宅",
+                emoji: "🤓🎸",
+                subtitle: "把音乐变成科学实验",
+                image: "images/nerd.png",
+                description: "你是乐队的<strong>技术顾问</strong>。你研究音乐理论，分析音频频谱，编写音乐软件。你把音乐当成科学研究，追求完美的和声和编曲。你让乐队音乐更专业，也让排练变得像实验室。<br><br><strong>你的经典语录：</strong>\"这个和声进行符合泛音列...\" \"我们需要调整EQ...\" \"我写了个程序来分析我们的音乐...\"",
+                warning: "队友觉得你太 geeky。建议：偶尔放下理论，跟随感觉玩音乐。",
+                condition: {
+                    "tech": { "min": 20 },
+                    "narc": { "min": 10 },
+                    "chaos": { "max": 10 }
+                }
+            },
+            {
+                id: "traveler",
+                name: "TRAVELER旅行家",
+                emoji: "✈️🎸",
+                subtitle: "乐队是借口，旅行才是目的",
+                image: "images/traveler.png",
+                description: "你是乐队的<strong>行程规划师</strong>。你提议去不同城市演出，去不同国家巡演，把演出当成旅行的机会。你让乐队成员开阔眼界，也让演出变得更有意义。但你也可能因为旅行计划影响乐队稳定。<br><br><strong>你的经典语录：</strong>\"我们去丽江演出吧...\" \"演出完我们去爬雪山...\" \"这个城市的音乐氛围不错...\"",
+                warning: "队友觉得你太折腾。建议：平衡旅行和演出，确保乐队稳定发展。",
+                condition: {
+                    "chaos": { "min": 15 },
+                    "team": { "min": 10 },
+                    "late": { "min": 10 }
+                }
+            },
+            {
+                id: "chef",
+                name: "CHEF厨师",
+                emoji: "🍳🎸",
+                subtitle: "音乐是配菜，做饭才是主业",
+                image: "images/chef.png",
+                description: "你是乐队的<strong>后勤部长</strong>。你在排练时带自制点心，在演出前做营养餐，在巡演时找当地美食。你让乐队成员吃得好，也让排练和演出变得更有烟火气。但你也可能因为做饭耽误排练时间。<br><br><strong>你的经典语录：</strong>\"排练前我做了曲奇...\" \"这个场地的厨房不错，可以做饭...\" \"演出完我们回家吃火锅...\"",
+                warning: "队友觉得你本末倒置。建议：平衡做饭和音乐，别让做饭影响排练。",
+                condition: {
+                    "team": { "min": 18 },
+                    "chaos": { "min": 10 },
+                    "late": { "min": 10 }
+                }
+            },
+            {
+                id: "cosplayer",
+                name: "COSPLAYER coser",
+                emoji: "🎭🎸",
+                subtitle: "演出是cosplay现场，音乐是背景",
+                image: "images/cosplayer.png",
+                description: "你是乐队的<strong>形象设计师</strong>。你在演出时穿cosplay服装，化浓妆，把舞台变成二次元世界。你让乐队演出更有视觉冲击力，也让自己成为焦点。但你也可能因为化妆时间太长影响演出。<br><br><strong>你的经典语录：</strong>\"我的妆还没化完...\" \"这个角色的服装适合这首歌...\" \"演出后我们拍cosplay照片...\"",
+                warning: "队友觉得你太分心。建议：平衡cosplay和音乐，确保演出质量。",
+                condition: {
+                    "narc": { "min": 18 },
+                    "late": { "min": 15 },
+                    "chaos": { "min": 10 }
+                }
+            },
+            {
+                id: "bookworm",
+                name: "BOOKWORM书虫",
+                emoji: "📖🎸",
+                subtitle: "音乐是副业，读书才是真爱",
+                image: "images/bookworm.png",
+                description: "你是乐队的<strong>文化顾问</strong>。你在排练时带本书，在演出前看几页，在创作时引用文学作品。你让乐队歌词更有深度，也让乐队成员更有文化素养。但你也可能因为看书入神耽误排练。<br><br><strong>你的经典语录：</strong>\"这首歌的歌词可以参考《百年孤独》...\" \"排练前我看完这章...\" \"这个旋律让我想起了一首诗...\"",
+                warning: "队友觉得你太文艺。建议：平衡读书和音乐，确保排练效率。",
+                condition: {
+                    "tech": { "min": 15 },
+                    "team": { "min": 10 },
+                    "chaos": { "max": 10 }
+                }
+            },
+            {
+                id: "party",
+                name: "PARTY派对动物",
+                emoji: "🎉🎸",
+                subtitle: "演出是借口，派对才是目的",
+                image: "images/party.png",
+                description: "你是乐队的<strong>社交达人</strong>。你在演出前组织预热派对，在演出后组织庆功宴，在排练间隙组织小游戏。你让乐队氛围充满活力，也让演出变得更有社交性。但你也可能因为派对太多影响排练。<br><br><strong>你的经典语录：</strong>\"演出后去蹦迪...\" \"排练完我们去喝酒...\" \"这个场地的派对氛围不错...\"",
+                warning: "队友觉得你太贪玩。建议：平衡派对和音乐，确保演出质量。",
+                condition: {
+                    "chaos": { "min": 20 },
+                    "narc": { "min": 15 },
+                    "late": { "min": 10 }
+                }
+            },
+            {
+                id: "minimalist",
+                name: "MINIMALIST极简主义者",
+                emoji: "⚪🎸",
+                subtitle: "少即是多，简单就是美",
+                image: "images/minimalist.png",
+                description: "你是乐队的<strong>简约设计师</strong>。你主张简单的编曲，简洁的舞台，简约的服装。你认为音乐应该回归本质，不需要太多修饰。你让乐队音乐更纯粹，也让排练变得更高效。但你也可能因为过于简约失去表现力。<br><br><strong>你的经典语录：</strong>\"这段可以再简化一点...\" \"我们不需要那么多设备...\" \"简单就是美...\"",
+                warning: "队友觉得你太单调。建议：适度丰富音乐，别让简约变成单调。",
+                condition: {
+                    "tech": { "min": 15 },
+                    "chaos": { "max": 10 },
+                    "team": { "min": 15 }
+                }
+            },
+            {
+                id: "magician",
+                name: "MAGICIAN魔术师",
+                emoji: "🪄🎸",
+                subtitle: "把演出变成魔术表演",
+                image: "images/magician.png",
+                description: "你是乐队的<strong>创意总监</strong>。你在演出时加入魔术元素，在编曲中加入奇特音效，在舞台上制造惊喜。你让乐队演出更有创意，也让观众眼前一亮。但你也可能因为魔术道具影响演出。<br><br><strong>你的经典语录：</strong>\"看我的吉他会变魔术...\" \"这段音乐是魔法...\" \"演出有惊喜...\"",
+                warning: "队友觉得你太分心。建议：平衡魔术和音乐，确保演出质量。",
+                condition: {
+                    "chaos": { "min": 18 },
+                    "narc": { "min": 15 },
+                    "tech": { "min": 10 }
+                }
+            },
+            {
+                id: "green",
+                name: "GREEN环保主义者",
+                emoji: "🌱🎸",
+                subtitle: "音乐要环保，地球要爱护",
+                image: "images/green.png",
+                description: "你是乐队的<strong>环保大使</strong>。你使用环保乐器，提倡绿色演出，宣传环保理念。你让乐队成为环保榜样，也让音乐更有意义。但你也可能因为环保要求影响演出效果。<br><br><strong>你的经典语录：</strong>\"我们用回收材料做乐器...\" \"演出要减少碳排放...\" \"音乐和环保可以共存...\"",
+                warning: "队友觉得你太极端。建议：适度环保，别让环保要求影响演出质量。",
+                condition: {
+                    "team": { "min": 18 },
+                    "tech": { "min": 10 },
+                    "chaos": { "max": 10 }
                 }
             }
         ];
