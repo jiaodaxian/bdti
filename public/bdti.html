@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Microsoft YaHei', sans-serif;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
@@ -18,7 +19,7 @@
             color: #fff;
             overflow-x: hidden;
         }
-        
+
         .noise {
             position: fixed;
             top: 0;
@@ -30,7 +31,7 @@
             z-index: 1;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
-        
+
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -38,12 +39,12 @@
             position: relative;
             z-index: 2;
         }
-        
+
         .header {
             text-align: center;
             margin-bottom: 40px;
         }
-        
+
         .logo {
             font-size: 4rem;
             font-weight: 900;
@@ -51,26 +52,42 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: 0 0 30px rgba(255,0,110,0.3);
+            text-shadow: 0 0 30px rgba(255, 0, 110, 0.3);
             animation: glitch 2s infinite;
             letter-spacing: -2px;
         }
-        
+
         @keyframes glitch {
-            0%, 100% { transform: translate(0); }
-            20% { transform: translate(-2px, 2px); }
-            40% { transform: translate(-2px, -2px); }
-            60% { transform: translate(2px, 2px); }
-            80% { transform: translate(2px, -2px); }
+
+            0%,
+            100% {
+                transform: translate(0);
+            }
+
+            20% {
+                transform: translate(-2px, 2px);
+            }
+
+            40% {
+                transform: translate(-2px, -2px);
+            }
+
+            60% {
+                transform: translate(2px, 2px);
+            }
+
+            80% {
+                transform: translate(2px, -2px);
+            }
         }
-        
+
         .subtitle {
             font-size: 1.2rem;
             color: #a0a0a0;
             margin-top: 10px;
             font-style: italic;
         }
-        
+
         .badge {
             display: inline-block;
             background: #ff006e;
@@ -80,30 +97,30 @@
             font-size: 0.9rem;
             margin-top: 15px;
             transform: rotate(-2deg);
-            box-shadow: 0 4px 15px rgba(255,0,110,0.4);
+            box-shadow: 0 4px 15px rgba(255, 0, 110, 0.4);
         }
-        
+
         .intro {
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
             border-radius: 20px;
             padding: 30px;
             margin-bottom: 30px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         .intro h2 {
             color: #ffbe0b;
             margin-bottom: 15px;
             font-size: 1.5rem;
         }
-        
+
         .intro p {
             line-height: 1.8;
             color: #d0d0d0;
             margin-bottom: 10px;
         }
-        
+
         .warning {
             background: rgba(251, 86, 7, 0.1);
             border-left: 4px solid #fb5607;
@@ -112,15 +129,15 @@
             margin: 20px 0;
             font-size: 0.9rem;
         }
-        
+
         .progress-container {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             height: 8px;
             border-radius: 10px;
             margin-bottom: 30px;
             overflow: hidden;
         }
-        
+
         .progress-bar {
             height: 100%;
             background: linear-gradient(90deg, #ff006e, #fb5607, #ffbe0b);
@@ -128,39 +145,40 @@
             transition: width 0.3s ease;
             border-radius: 10px;
         }
-        
+
         .progress-text {
             text-align: center;
             margin-bottom: 10px;
             color: #ffbe0b;
             font-weight: bold;
         }
-        
+
         .question-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             padding: 30px;
             margin-bottom: 20px;
             display: none;
             animation: slideIn 0.5s ease;
         }
-        
+
         .question-card.active {
             display: block;
         }
-        
+
         @keyframes slideIn {
             from {
                 opacity: 0;
                 transform: translateX(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
             }
         }
-        
+
         .question-number {
             color: #8338ec;
             font-size: 0.9rem;
@@ -168,23 +186,23 @@
             text-transform: uppercase;
             letter-spacing: 2px;
         }
-        
+
         .question-text {
             font-size: 1.3rem;
             margin-bottom: 25px;
             line-height: 1.6;
             font-weight: 500;
         }
-        
+
         .options {
             display: flex;
             flex-direction: column;
             gap: 12px;
         }
-        
+
         .option {
-            background: rgba(255,255,255,0.05);
-            border: 2px solid rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             padding: 18px 20px;
             cursor: pointer;
@@ -193,51 +211,58 @@
             align-items: center;
             gap: 12px;
         }
-        
+
         .option:hover {
-            background: rgba(255,0,110,0.1);
+            background: rgba(255, 0, 110, 0.1);
             border-color: #ff006e;
             transform: translateX(5px);
         }
-        
+
         .option.selected {
-            background: rgba(255,0,110,0.2);
+            background: rgba(255, 0, 110, 0.2);
             border-color: #ff006e;
         }
-        
+
         .option-emoji {
             font-size: 1.5rem;
         }
-        
+
         .result-container {
             display: none;
             animation: fadeIn 0.8s ease;
         }
-        
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
-        
+
         .result-header {
             text-align: center;
             margin-bottom: 40px;
         }
-        
+
         .result-type {
             font-size: 3rem;
             font-weight: 900;
             color: #ffbe0b;
             margin-bottom: 10px;
-            text-shadow: 0 0 20px rgba(255,190,11,0.5);
+            text-shadow: 0 0 20px rgba(255, 190, 11, 0.5);
         }
-        
+
         .result-subtitle {
             font-size: 1.2rem;
             color: #a0a0a0;
             margin-bottom: 20px;
         }
-        
+
         .match-score {
             display: inline-block;
             background: linear-gradient(135deg, #ff006e, #8338ec);
@@ -247,19 +272,19 @@
             font-weight: bold;
             margin-bottom: 20px;
         }
-        
+
         .personality-card {
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 20px;
             padding: 30px;
             margin-bottom: 30px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         .dimension {
             margin-bottom: 20px;
         }
-        
+
         .dimension-label {
             display: flex;
             justify-content: space-between;
@@ -267,22 +292,22 @@
             font-size: 0.9rem;
             color: #a0a0a0;
         }
-        
+
         .dimension-bar {
             height: 10px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 5px;
             overflow: hidden;
             position: relative;
         }
-        
+
         .dimension-fill {
             height: 100%;
             border-radius: 5px;
             transition: width 1s ease;
             position: relative;
         }
-        
+
         .dimension-fill::after {
             content: '';
             position: absolute;
@@ -290,15 +315,20 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
             animation: shimmer 2s infinite;
         }
-        
+
         @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
         }
-        
+
         .share-btn {
             background: linear-gradient(135deg, #ff006e, #fb5607);
             color: #fff;
@@ -312,13 +342,13 @@
             transition: transform 0.3s ease;
             font-weight: bold;
         }
-        
+
         .share-btn:hover {
             transform: scale(1.05);
         }
-        
+
         .disclaimer {
-            background: rgba(0,0,0,0.3);
+            background: rgba(0, 0, 0, 0.3);
             border-radius: 15px;
             padding: 20px;
             font-size: 0.85rem;
@@ -327,7 +357,7 @@
             margin-top: 30px;
             line-height: 1.8;
         }
-        
+
         .author-note {
             background: rgba(131, 56, 236, 0.1);
             border-radius: 15px;
@@ -335,7 +365,7 @@
             margin-top: 20px;
             border: 1px solid rgba(131, 56, 236, 0.3);
         }
-        
+
         .start-btn {
             background: linear-gradient(135deg, #ff006e, #8338ec);
             color: #fff;
@@ -348,32 +378,41 @@
             margin: 40px auto;
             transition: all 0.3s ease;
             font-weight: bold;
-            box-shadow: 0 10px 30px rgba(255,0,110,0.3);
+            box-shadow: 0 10px 30px rgba(255, 0, 110, 0.3);
         }
-        
+
         .start-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255,0,110,0.4);
+            box-shadow: 0 15px 40px rgba(255, 0, 110, 0.4);
         }
-        
-        .hidden { display: none; }
-        
+
+        .hidden {
+            display: none;
+        }
+
         .loading {
             text-align: center;
             padding: 50px;
         }
-        
+
         .loading-text {
             font-size: 1.5rem;
             color: #ffbe0b;
             animation: pulse 1.5s infinite;
         }
-        
+
         @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
         }
-        
+
         .band-emoji {
             font-size: 5rem;
             margin: 20px 0;
@@ -382,6 +421,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="noise"></div>
     <div class="container">
@@ -392,12 +432,12 @@
                 <div class="subtitle">乐队人格测试 · 测测你是什么鬼</div>
                 <div class="badge">🎸 全网最不准 · 但最好玩</div>
             </div>
-            
+
             <div class="intro">
                 <h2>🎵 为什么搞这个测试？</h2>
                 <p>MBTI已经过时了！现在流行<strong>BANDTI</strong>——<strong>BAND Temperament Indicator</strong>。</p>
                 <p>玩乐队的人都有病，我们只是帮你确诊一下你具体是哪种病。</p>
-                
+
                 <div class="warning">
                     ⚠️ <strong>警告：</strong>本测试可能会揭露你：<br>
                     1. 其实根本不会乐器却在装X<br>
@@ -405,12 +445,12 @@
                     3. 为什么队友想踢你出乐队<br>
                     4. 你为什么solo永远弹不好
                 </div>
-                
+
                 <p style="color: #ffbe0b; font-weight: bold;">只需 3 分钟，20道题，测出你的乐队人格原型！</p>
             </div>
-            
+
             <button class="start-btn" onclick="startTest()">🎸 开始测试（无法回头）</button>
-            
+
             <div class="disclaimer">
                 本测试仅供娱乐，请勿用于：乐队招新、踢人出队、找主唱谈恋爱、判断谁该买音箱、或者任何正经事。<br>
                 如果你测完生气了，说明测准了。🎯
@@ -420,12 +460,13 @@
         <!-- 测试页面 -->
         <div id="test-section" class="hidden">
             <div class="progress-text">
-                <span id="current-num">0</span> / 20 <span id="force-text" style="color: #ff006e; font-size: 0.8rem;">（全选完才给结果，别想跑）</span>
+                <span id="current-num">0</span> / 20 <span id="force-text"
+                    style="color: #ff006e; font-size: 0.8rem;">（全选完才给结果，别想跑）</span>
             </div>
             <div class="progress-container">
                 <div class="progress-bar" id="progress"></div>
             </div>
-            
+
             <div id="questions-container">
                 <!-- 问题将通过JS动态插入 -->
             </div>
@@ -441,12 +482,18 @@
         <!-- 结果页面 -->
         <div id="result" class="result-container hidden">
             <div class="result-header" style="position: relative;">
-                <div class="qr-code" style="position: absolute; top: 20px; right: 20px; width: 80px; height: 80px; background: white; padding: 8px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 1000;">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https://bdti.asia" alt="QR Code" style="width: 100%; height: 100%;">
-                    <div style="position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); font-size: 0.7rem; color: #ffbe0b; text-align: center; white-space: nowrap;">扫码测试</div>
+                <div class="qr-code"
+                    style="position: absolute; top: 20px; right: 20px; width: 80px; height: 80px; background: white; padding: 8px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 1000;">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=bdti.bandsurvival.fun"
+                        alt="QR Code" style="width: 100%; height: 100%;">
+                    <div
+                        style="position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); font-size: 0.7rem; color: #ffbe0b; text-align: center; white-space: nowrap;">
+                        扫码测试</div>
                 </div>
-                <div class="result-image" id="result-image" style="width: 200px; height: 200px; margin: 0 auto 20px; border-radius: 50%; overflow: hidden; border: 4px solid rgba(255,190,11,0.5); background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center;">
-                    <img id="result-img" src="" alt="" style="width: 100%; height: 100%; object-fit: cover; display: none;">
+                <div class="result-image" id="result-image"
+                    style="width: 200px; height: 200px; margin: 0 auto 20px; border-radius: 50%; overflow: hidden; border: 4px solid rgba(255,190,11,0.5); background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center;">
+                    <img id="result-img" src="" alt=""
+                        style="width: 100%; height: 100%; object-fit: cover; display: none;">
                     <span id="result-image-placeholder" style="font-size: 5rem;">🎸</span>
                 </div>
                 <div class="result-type" id="result-type">LOADING...</div>
@@ -466,7 +513,7 @@
 
             <div class="personality-card">
                 <h3 style="color: #ffbe0b; margin-bottom: 20px; font-size: 1.3rem;">📊 你的乐队毒性分析</h3>
-                
+
                 <div class="dimension">
                     <div class="dimension-label">
                         <span>技术装逼指数</span>
@@ -522,16 +569,18 @@
                 <h4 style="color: #8338ec; margin-bottom: 10px;">作者：赤潮REDTIDE</h4>
                 <p style="font-size: 0.9rem; line-height: 1.8; color: #aaa;">
                     关注我的网易云音乐，获取更多乐队相关内容：
-                    <a href="https://music.163.com/#/artist?id=51294811" target="_blank" style="color: #ffbe0b; text-decoration: none;">https://music.163.com/#/artist?id=51294811</a>
+                    <a href="https://music.163.com/#/artist?id=51294811" target="_blank"
+                        style="color: #ffbe0b; text-decoration: none;">https://music.163.com/#/artist?id=51294811</a>
                 </p>
                 <p style="font-size: 0.9rem; line-height: 1.8; color: #aaa;">
                     做这个测试是因为我想给乐队涨点粉，所以请你们关注一下我们的网易云。另外抖音和小红书搜“赤潮REDTIDE”也可以，今年我们会发第二张专辑。<br><br>
-                    鉴于我的人格是<strong style="color: #ff006e;">SHI2B事儿逼主唱</strong>，所以平等地冒犯了所有人。但有个事要说，我们会在6月13日出演“无差别对抗广州站”，大家现场见。无差别对抗上海站也已经开票了，大家可以秀动搜一下，主办真的很用心！<br><br>
+                    鉴于我的人格是<strong
+                        style="color: #ff006e;">SHI2B事儿逼主唱</strong>，所以平等地冒犯了所有人。但有个事要说，我们会在6月13日出演“无差别对抗广州站”，大家现场见。无差别对抗上海站也已经开票了，大家可以秀动搜一下，主办真的很用心！<br><br>
                     <strong style="color: #ffbe0b;">记住：</strong>玩乐队最重要的不是技术，是<strong>别解散</strong>。祝你们的乐队长生不老！🤘
                 </p>
             </div>
 
-           
+
 
             <div class="disclaimer">
                 免责声明：本测试无法解释为什么你的solo总是弹错、为什么鼓棒又断了、为什么调音师白了你一眼、以及为什么观众只给别的乐队鼓掌。<br>
@@ -546,181 +595,181 @@
             {
                 text: "排练前你在干什么？",
                 options: [
-                    { emoji: "🎸", text: "提前2小时到，调效果器链", scores: {tech: 3, chaos: 0, late: 0, narc: 2, team: 2} },
-                    { emoji: "😴", text: "刚睡醒，问'今天几点排练'", scores: {tech: 0, chaos: 1, late: 3, narc: 1, team: 0} },
-                    { emoji: "🍺", text: "在酒吧'找灵感'", scores: {tech: 0, chaos: 3, late: 2, narc: 2, team: 0} },
-                    { emoji: "📱", text: "发'马上到'（其实还在床上）", scores: {tech: 0, chaos: 2, late: 3, narc: 1, team: -1} }
+                    { emoji: "🎸", text: "提前2小时到，调效果器链", scores: { tech: 3, chaos: 0, late: 0, narc: 2, team: 2 } },
+                    { emoji: "😴", text: "刚睡醒，问'今天几点排练'", scores: { tech: 0, chaos: 1, late: 3, narc: 1, team: 0 } },
+                    { emoji: "🍺", text: "在酒吧'找灵感'", scores: { tech: 0, chaos: 3, late: 2, narc: 2, team: 0 } },
+                    { emoji: "📱", text: "发'马上到'（其实还在床上）", scores: { tech: 0, chaos: 2, late: 3, narc: 1, team: -1 } }
                 ]
             },
             {
                 text: "你的设备状况是？",
                 options: [
-                    { emoji: "💎", text: "价值5万的设备，音色完美", scores: {tech: 3, chaos: 0, late: 0, narc: 3, team: 1} },
-                    { emoji: "🔧", text: "借的/租的，能响就行", scores: {tech: 0, chaos: 3, late: 1, narc: 0, team: 0} },
-                    { emoji: "🎸", text: "一把琴走天下，坏了用胶带缠", scores: {tech: 1, chaos: 2, late: 0, narc: 0, team: 2} },
-                    { emoji: "🤷", text: "什么？还要自己带设备？", scores: {tech: 0, chaos: 1, late: 0, narc: 2, team: -2} }
+                    { emoji: "💎", text: "价值5万的设备，音色完美", scores: { tech: 3, chaos: 0, late: 0, narc: 3, team: 1 } },
+                    { emoji: "🔧", text: "借的/租的，能响就行", scores: { tech: 0, chaos: 3, late: 1, narc: 0, team: 0 } },
+                    { emoji: "🎸", text: "一把琴走天下，坏了用胶带缠", scores: { tech: 1, chaos: 2, late: 0, narc: 0, team: 2 } },
+                    { emoji: "🤷", text: "什么？还要自己带设备？", scores: { tech: 0, chaos: 1, late: 0, narc: 2, team: -2 } }
                 ]
             },
             {
                 text: "队友弹错了，你会？",
                 options: [
-                    { emoji: "😐", text: "当场指出并示范正确弹法", scores: {tech: 2, chaos: 1, late: 0, narc: 2, team: 0} },
-                    { emoji: "😅", text: "笑笑说'没事再来一次'", scores: {tech: 0, chaos: 0, late: 0, narc: 0, team: 3} },
-                    { emoji: "🙄", text: "翻白眼但不说，记在小本本上", scores: {tech: 1, chaos: 1, late: 0, narc: 2, team: -2} },
-                    { emoji: "🎸", text: "趁机秀一段自己的solo", scores: {tech: 2, chaos: 2, late: 0, narc: 3, team: -1} }
+                    { emoji: "😐", text: "当场指出并示范正确弹法", scores: { tech: 2, chaos: 1, late: 0, narc: 2, team: 0 } },
+                    { emoji: "😅", text: "笑笑说'没事再来一次'", scores: { tech: 0, chaos: 0, late: 0, narc: 0, team: 3 } },
+                    { emoji: "🙄", text: "翻白眼但不说，记在小本本上", scores: { tech: 1, chaos: 1, late: 0, narc: 2, team: -2 } },
+                    { emoji: "🎸", text: "趁机秀一段自己的solo", scores: { tech: 2, chaos: 2, late: 0, narc: 3, team: -1 } }
                 ]
             },
             {
                 text: "关于乐队名字，你的态度是？",
                 options: [
-                    { emoji: "🤔", text: "必须有意义，要查重注册", scores: {tech: 2, chaos: 0, late: 1, narc: 1, team: 2} },
-                    { emoji: "😎", text: "随便取的，反正没人记得", scores: {tech: 0, chaos: 2, late: 0, narc: 0, team: 1} },
-                    { emoji: "✨", text: "要酷炫神秘，让人听不懂", scores: {tech: 0, chaos: 1, late: 0, narc: 3, team: 0} },
-                    { emoji: "🍔", text: "用今天吃的汉堡名字命名", scores: {tech: 0, chaos: 3, late: 0, narc: 1, team: 0} }
+                    { emoji: "🤔", text: "必须有意义，要查重注册", scores: { tech: 2, chaos: 0, late: 1, narc: 1, team: 2 } },
+                    { emoji: "😎", text: "随便取的，反正没人记得", scores: { tech: 0, chaos: 2, late: 0, narc: 0, team: 1 } },
+                    { emoji: "✨", text: "要酷炫神秘，让人听不懂", scores: { tech: 0, chaos: 1, late: 0, narc: 3, team: 0 } },
+                    { emoji: "🍔", text: "用今天吃的汉堡名字命名", scores: { tech: 0, chaos: 3, late: 0, narc: 1, team: 0 } }
                 ]
             },
             {
                 text: "演出前你会？",
                 options: [
-                    { emoji: "🧘", text: "热身、开嗓、冥想", scores: {tech: 3, chaos: 0, late: 0, narc: 2, team: 1} },
-                    { emoji: "🍺", text: "喝两杯'壮胆'（然后喝多）", scores: {tech: 0, chaos: 3, late: 0, narc: 1, team: -1} },
-                    { emoji: "🎸", text: "疯狂练习没练熟的部分", scores: {tech: 2, chaos: 1, late: 1, narc: 1, team: 0} },
-                    { emoji: "📸", text: "拍10张后台照发朋友圈", scores: {tech: 0, chaos: 1, late: 0, narc: 3, team: 0} }
+                    { emoji: "🧘", text: "热身、开嗓、冥想", scores: { tech: 3, chaos: 0, late: 0, narc: 2, team: 1 } },
+                    { emoji: "🍺", text: "喝两杯'壮胆'（然后喝多）", scores: { tech: 0, chaos: 3, late: 0, narc: 1, team: -1 } },
+                    { emoji: "🎸", text: "疯狂练习没练熟的部分", scores: { tech: 2, chaos: 1, late: 1, narc: 1, team: 0 } },
+                    { emoji: "📸", text: "拍10张后台照发朋友圈", scores: { tech: 0, chaos: 1, late: 0, narc: 3, team: 0 } }
                 ]
             },
             {
                 text: "你的solo段落？",
                 options: [
-                    { emoji: "🔥", text: "精心编排，每天练习2小时", scores: {tech: 3, chaos: 0, late: 0, narc: 2, team: 1} },
-                    { emoji: "🎸", text: "即兴发挥，每次都不一样", scores: {tech: 1, chaos: 3, late: 0, narc: 2, team: 0} },
-                    { emoji: "⏱️", text: "比原定长3倍，'感觉来了'", scores: {tech: 1, chaos: 2, late: 0, narc: 3, team: -2} },
-                    { emoji: "🙅", text: "没有solo，拒绝炫耀", scores: {tech: 1, chaos: 0, late: 0, narc: 0, team: 3} }
+                    { emoji: "🔥", text: "精心编排，每天练习2小时", scores: { tech: 3, chaos: 0, late: 0, narc: 2, team: 1 } },
+                    { emoji: "🎸", text: "即兴发挥，每次都不一样", scores: { tech: 1, chaos: 3, late: 0, narc: 2, team: 0 } },
+                    { emoji: "⏱️", text: "比原定长3倍，'感觉来了'", scores: { tech: 1, chaos: 2, late: 0, narc: 3, team: -2 } },
+                    { emoji: "🙅", text: "没有solo，拒绝炫耀", scores: { tech: 1, chaos: 0, late: 0, narc: 0, team: 3 } }
                 ]
             },
             {
                 text: "乐队群里你最常发？",
                 options: [
-                    { emoji: "📅", text: "排练时间表和待办清单", scores: {tech: 2, chaos: 0, late: 0, narc: 0, team: 3} },
-                    { emoji: "🎵", text: "分享别的乐队视频'学学人家'", scores: {tech: 2, chaos: 0, late: 0, narc: 2, team: 0} },
-                    { emoji: "😂", text: "表情包和没营养的废话", scores: {tech: 0, chaos: 3, late: 0, narc: 0, team: 1} },
-                    { emoji: "🙄", text: "抱怨和指责队友的消息", scores: {tech: 0, chaos: 1, late: 0, narc: 2, team: -3} }
+                    { emoji: "📅", text: "排练时间表和待办清单", scores: { tech: 2, chaos: 0, late: 0, narc: 0, team: 3 } },
+                    { emoji: "🎵", text: "分享别的乐队视频'学学人家'", scores: { tech: 2, chaos: 0, late: 0, narc: 2, team: 0 } },
+                    { emoji: "😂", text: "表情包和没营养的废话", scores: { tech: 0, chaos: 3, late: 0, narc: 0, team: 1 } },
+                    { emoji: "🙄", text: "抱怨和指责队友的消息", scores: { tech: 0, chaos: 1, late: 0, narc: 2, team: -3 } }
                 ]
             },
             {
                 text: "关于乐队风格？",
                 options: [
-                    { emoji: "🎸", text: "必须纯粹，拒绝商业", scores: {tech: 2, chaos: 0, late: 0, narc: 2, team: 0} },
-                    { emoji: "💰", text: "什么火玩什么，赚钱要紧", scores: {tech: 1, chaos: 1, late: 0, narc: 1, team: 0} },
-                    { emoji: "🤷", text: "风格？随缘吧", scores: {tech: 0, chaos: 3, late: 0, narc: 0, team: 1} },
-                    { emoji: "🎵", text: "融合18种风格，没人懂", scores: {tech: 3, chaos: 2, late: 0, narc: 2, team: -1} }
+                    { emoji: "🎸", text: "必须纯粹，拒绝商业", scores: { tech: 2, chaos: 0, late: 0, narc: 2, team: 0 } },
+                    { emoji: "💰", text: "什么火玩什么，赚钱要紧", scores: { tech: 1, chaos: 1, late: 0, narc: 1, team: 0 } },
+                    { emoji: "🤷", text: "风格？随缘吧", scores: { tech: 0, chaos: 3, late: 0, narc: 0, team: 1 } },
+                    { emoji: "🎵", text: "融合18种风格，没人懂", scores: { tech: 3, chaos: 2, late: 0, narc: 2, team: -1 } }
                 ]
             },
             {
                 text: "关于原创和翻唱？",
                 options: [
-                    { emoji: "✍️", text: "只演原创，翻唱是背叛", scores: {tech: 2, chaos: 0, late: 0, narc: 2, team: 0} },
-                    { emoji: "🎵", text: "观众想听什么演什么", scores: {tech: 1, chaos: 1, late: 0, narc: 0, team: 2} },
-                    { emoji: "🤷", text: "原创？还在学别人的歌", scores: {tech: 0, chaos: 2, late: 0, narc: 0, team: 0} },
-                    { emoji: "🎸", text: "把翻唱改得面目全非说是原创", scores: {tech: 2, chaos: 2, late: 0, narc: 2, team: -1} }
+                    { emoji: "✍️", text: "只演原创，翻唱是背叛", scores: { tech: 2, chaos: 0, late: 0, narc: 2, team: 0 } },
+                    { emoji: "🎵", text: "观众想听什么演什么", scores: { tech: 1, chaos: 1, late: 0, narc: 0, team: 2 } },
+                    { emoji: "🤷", text: "原创？还在学别人的歌", scores: { tech: 0, chaos: 2, late: 0, narc: 0, team: 0 } },
+                    { emoji: "🎸", text: "把翻唱改得面目全非说是原创", scores: { tech: 2, chaos: 2, late: 0, narc: 2, team: -1 } }
                 ]
             },
             {
                 text: "你的练琴习惯是？",
                 options: [
-                    { emoji: "⏰", text: "每天固定4小时，雷打不动", scores: {tech: 3, chaos: 0, late: 0, narc: 1, team: 1} },
-                    { emoji: "🎸", text: "有灵感才练（基本不练）", scores: {tech: 1, chaos: 2, late: 0, narc: 2, team: 0} },
-                    { emoji: "📅", text: "演出前一周突击", scores: {tech: 1, chaos: 1, late: 1, narc: 1, team: 0} },
-                    { emoji: "🙅", text: "不练，天生的", scores: {tech: 0, chaos: 2, late: 0, narc: 3, team: -2} }
+                    { emoji: "⏰", text: "每天固定4小时，雷打不动", scores: { tech: 3, chaos: 0, late: 0, narc: 1, team: 1 } },
+                    { emoji: "🎸", text: "有灵感才练（基本不练）", scores: { tech: 1, chaos: 2, late: 0, narc: 2, team: 0 } },
+                    { emoji: "📅", text: "演出前一周突击", scores: { tech: 1, chaos: 1, late: 1, narc: 1, team: 0 } },
+                    { emoji: "🙅", text: "不练，天生的", scores: { tech: 0, chaos: 2, late: 0, narc: 3, team: -2 } }
                 ]
             },
             {
                 text: "演出时忘词/忘谱了，你会？",
                 options: [
-                    { emoji: "😎", text: "面不改色，假装是即兴", scores: {tech: 2, chaos: 2, late: 0, narc: 3, team: 0} },
-                    { emoji: "😅", text: "停下来笑场，重新开始", scores: {tech: 0, chaos: 2, late: 0, narc: 0, team: 2} },
-                    { emoji: "🎸", text: "把琴举过头顶，转移注意力", scores: {tech: 1, chaos: 3, late: 0, narc: 2, team: 0} },
-                    { emoji: "🏃", text: "直接跑下台", scores: {tech: 0, chaos: 3, late: 0, narc: 0, team: -2} }
+                    { emoji: "😎", text: "面不改色，假装是即兴", scores: { tech: 2, chaos: 2, late: 0, narc: 3, team: 0 } },
+                    { emoji: "😅", text: "停下来笑场，重新开始", scores: { tech: 0, chaos: 2, late: 0, narc: 0, team: 2 } },
+                    { emoji: "🎸", text: "把琴举过头顶，转移注意力", scores: { tech: 1, chaos: 3, late: 0, narc: 2, team: 0 } },
+                    { emoji: "🏃", text: "直接跑下台", scores: { tech: 0, chaos: 3, late: 0, narc: 0, team: -2 } }
                 ]
             },
             {
                 text: "你对队友私生活的态度？",
                 options: [
-                    { emoji: "🚫", text: "绝不干涉，音乐归音乐", scores: {tech: 1, chaos: 0, late: 0, narc: 0, team: 3} },
-                    { emoji: "👀", text: "密切关注，八卦中心", scores: {tech: 0, chaos: 2, late: 0, narc: 1, team: -1} },
-                    { emoji: "💔", text: "正在和队友谈恋爱（危险）", scores: {tech: 0, chaos: 3, late: 0, narc: 2, team: -3} },
-                    { emoji: "🤷", text: "不知道队友全名叫什么", scores: {tech: 0, chaos: 1, late: 0, narc: 0, team: -1} }
+                    { emoji: "🚫", text: "绝不干涉，音乐归音乐", scores: { tech: 1, chaos: 0, late: 0, narc: 0, team: 3 } },
+                    { emoji: "👀", text: "密切关注，八卦中心", scores: { tech: 0, chaos: 2, late: 0, narc: 1, team: -1 } },
+                    { emoji: "💔", text: "正在和队友谈恋爱（危险）", scores: { tech: 0, chaos: 3, late: 0, narc: 2, team: -3 } },
+                    { emoji: "🤷", text: "不知道队友全名叫什么", scores: { tech: 0, chaos: 1, late: 0, narc: 0, team: -1 } }
                 ]
             },
             {
                 text: "关于乐队社交媒体？",
                 options: [
-                    { emoji: "📱", text: "精心运营，日更三条", scores: {tech: 1, chaos: 0, late: 1, narc: 2, team: 1} },
-                    { emoji: "🤷", text: "想起来才发，半年一条", scores: {tech: 0, chaos: 2, late: 0, narc: 0, team: 0} },
-                    { emoji: "😤", text: "抱怨粉丝少，平台不识货", scores: {tech: 0, chaos: 1, late: 0, narc: 3, team: 0} },
-                    { emoji: "🙅", text: "不搞这些，太商业", scores: {tech: 1, chaos: 0, late: 0, narc: 1, team: 0} }
+                    { emoji: "📱", text: "精心运营，日更三条", scores: { tech: 1, chaos: 0, late: 1, narc: 2, team: 1 } },
+                    { emoji: "🤷", text: "想起来才发，半年一条", scores: { tech: 0, chaos: 2, late: 0, narc: 0, team: 0 } },
+                    { emoji: "😤", text: "抱怨粉丝少，平台不识货", scores: { tech: 0, chaos: 1, late: 0, narc: 3, team: 0 } },
+                    { emoji: "🙅", text: "不搞这些，太商业", scores: { tech: 1, chaos: 0, late: 0, narc: 1, team: 0 } }
                 ]
             },
             {
                 text: "演出费怎么分？",
                 options: [
-                    { emoji: "⚖️", text: "平均分配，人人平等", scores: {tech: 0, chaos: 0, late: 0, narc: 0, team: 3} },
-                    { emoji: "👑", text: "我写的歌我多拿", scores: {tech: 1, chaos: 0, late: 0, narc: 2, team: -1} },
-                    { emoji: "🤷", text: "什么？还有演出费？", scores: {tech: 0, chaos: 2, late: 0, narc: 0, team: 0} },
-                    { emoji: "🍺", text: "当场花光，吃顿好的", scores: {tech: 0, chaos: 3, late: 0, narc: 0, team: 1} }
+                    { emoji: "⚖️", text: "平均分配，人人平等", scores: { tech: 0, chaos: 0, late: 0, narc: 0, team: 3 } },
+                    { emoji: "👑", text: "我写的歌我多拿", scores: { tech: 1, chaos: 0, late: 0, narc: 2, team: -1 } },
+                    { emoji: "🤷", text: "什么？还有演出费？", scores: { tech: 0, chaos: 2, late: 0, narc: 0, team: 0 } },
+                    { emoji: "🍺", text: "当场花光，吃顿好的", scores: { tech: 0, chaos: 3, late: 0, narc: 0, team: 1 } }
                 ]
             },
             {
                 text: "你对乐队的终极目标是？",
                 options: [
-                    { emoji: "🏟️", text: " stadium巡演，格莱美领奖", scores: {tech: 2, chaos: 0, late: 0, narc: 2, team: 0} },
-                    { emoji: "🎸", text: "保持地下，永远纯粹", scores: {tech: 2, chaos: 0, late: 0, narc: 2, team: 0} },
-                    { emoji: "🤷", text: "能不散就行", scores: {tech: 0, chaos: 1, late: 0, narc: 0, team: 3} },
-                    { emoji: "🍺", text: "有地方排练，有酒喝", scores: {tech: 0, chaos: 3, late: 0, narc: 0, team: 1} }
+                    { emoji: "🏟️", text: " stadium巡演，格莱美领奖", scores: { tech: 2, chaos: 0, late: 0, narc: 2, team: 0 } },
+                    { emoji: "🎸", text: "保持地下，永远纯粹", scores: { tech: 2, chaos: 0, late: 0, narc: 2, team: 0 } },
+                    { emoji: "🤷", text: "能不散就行", scores: { tech: 0, chaos: 1, late: 0, narc: 0, team: 3 } },
+                    { emoji: "🍺", text: "有地方排练，有酒喝", scores: { tech: 0, chaos: 3, late: 0, narc: 0, team: 1 } }
                 ]
             },
             {
                 text: "排练室最常见的情况？",
                 options: [
-                    { emoji: "🎵", text: "认真排练，效率极高", scores: {tech: 3, chaos: 0, late: 0, narc: 0, team: 3} },
-                    { emoji: "🗣️", text: "聊天2小时，排练20分钟", scores: {tech: 0, chaos: 2, late: 0, narc: 0, team: 2} },
-                    { emoji: "🎸", text: " jam到天亮，忘了练正事", scores: {tech: 1, chaos: 3, late: 0, narc: 1, team: 1} },
-                    { emoji: "😤", text: "吵架，冷战，有人摔门而出", scores: {tech: 0, chaos: 2, late: 0, narc: 2, team: -3} }
+                    { emoji: "🎵", text: "认真排练，效率极高", scores: { tech: 3, chaos: 0, late: 0, narc: 0, team: 3 } },
+                    { emoji: "🗣️", text: "聊天2小时，排练20分钟", scores: { tech: 0, chaos: 2, late: 0, narc: 0, team: 2 } },
+                    { emoji: "🎸", text: " jam到天亮，忘了练正事", scores: { tech: 1, chaos: 3, late: 0, narc: 1, team: 1 } },
+                    { emoji: "😤", text: "吵架，冷战，有人摔门而出", scores: { tech: 0, chaos: 2, late: 0, narc: 2, team: -3 } }
                 ]
             },
             {
                 text: "你对乐队照片和服装？",
                 options: [
-                    { emoji: "📸", text: "专业摄影师，统一队服", scores: {tech: 1, chaos: 0, late: 1, narc: 3, team: 2} },
-                    { emoji: "🤳", text: "手机随便拍，穿啥都行", scores: {tech: 0, chaos: 2, late: 0, narc: 0, team: 1} },
-                    { emoji: "😎", text: "遮脸/背影，保持神秘", scores: {tech: 1, chaos: 1, late: 0, narc: 2, team: 0} },
-                    { emoji: "🙅", text: "不拍，我们靠音乐说话", scores: {tech: 2, chaos: 0, late: 0, narc: 1, team: 0} }
+                    { emoji: "📸", text: "专业摄影师，统一队服", scores: { tech: 1, chaos: 0, late: 1, narc: 3, team: 2 } },
+                    { emoji: "🤳", text: "手机随便拍，穿啥都行", scores: { tech: 0, chaos: 2, late: 0, narc: 0, team: 1 } },
+                    { emoji: "😎", text: "遮脸/背影，保持神秘", scores: { tech: 1, chaos: 1, late: 0, narc: 2, team: 0 } },
+                    { emoji: "🙅", text: "不拍，我们靠音乐说话", scores: { tech: 2, chaos: 0, late: 0, narc: 1, team: 0 } }
                 ]
             },
             {
                 text: "你的乐器损坏频率？",
                 options: [
-                    { emoji: "💎", text: "精心保养，从未损坏", scores: {tech: 3, chaos: 0, late: 0, narc: 1, team: 1} },
-                    { emoji: "🎸", text: "经常磕碰，都是战损版", scores: {tech: 1, chaos: 2, late: 0, narc: 0, team: 0} },
-                    { emoji: "🔥", text: "演出必摔，这是艺术", scores: {tech: 0, chaos: 3, late: 0, narc: 3, team: -2} },
-                    { emoji: "🤷", text: "借别人的，坏了不心疼", scores: {tech: 0, chaos: 2, late: 0, narc: 1, team: -1} }
+                    { emoji: "💎", text: "精心保养，从未损坏", scores: { tech: 3, chaos: 0, late: 0, narc: 1, team: 1 } },
+                    { emoji: "🎸", text: "经常磕碰，都是战损版", scores: { tech: 1, chaos: 2, late: 0, narc: 0, team: 0 } },
+                    { emoji: "🔥", text: "演出必摔，这是艺术", scores: { tech: 0, chaos: 3, late: 0, narc: 3, team: -2 } },
+                    { emoji: "🤷", text: "借别人的，坏了不心疼", scores: { tech: 0, chaos: 2, late: 0, narc: 1, team: -1 } }
                 ]
             },
             {
                 text: "演出结束后你？",
                 options: [
-                    { emoji: "🔍", text: "立刻复盘，指出所有错误", scores: {tech: 2, chaos: 0, late: 0, narc: 1, team: -1} },
-                    { emoji: "🍻", text: "去喝酒庆祝（不管演得怎么样）", scores: {tech: 0, chaos: 3, late: 0, narc: 1, team: 1} },
-                    { emoji: "😤", text: "生气，观众不懂欣赏", scores: {tech: 1, chaos: 1, late: 0, narc: 3, team: -2} },
-                    { emoji: "🎸", text: "开始想下一场setlist", scores: {tech: 2, chaos: 0, late: 0, narc: 1, team: 2} }
+                    { emoji: "🔍", text: "立刻复盘，指出所有错误", scores: { tech: 2, chaos: 0, late: 0, narc: 1, team: -1 } },
+                    { emoji: "🍻", text: "去喝酒庆祝（不管演得怎么样）", scores: { tech: 0, chaos: 3, late: 0, narc: 1, team: 1 } },
+                    { emoji: "😤", text: "生气，观众不懂欣赏", scores: { tech: 1, chaos: 1, late: 0, narc: 3, team: -2 } },
+                    { emoji: "🎸", text: "开始想下一场setlist", scores: { tech: 2, chaos: 0, late: 0, narc: 1, team: 2 } }
                 ]
             },
             {
                 text: "关于乐队周边和logo？",
                 options: [
-                    { emoji: "👕", text: "设计精美，限量发售", scores: {tech: 1, chaos: 0, late: 1, narc: 2, team: 1} },
-                    { emoji: "✏️", text: "自己画logo，丑也是特色", scores: {tech: 1, chaos: 2, late: 0, narc: 1, team: 1} },
-                    { emoji: "🤷", text: "没有周边，懒得搞", scores: {tech: 0, chaos: 2, late: 0, narc: 0, team: 0} },
-                    { emoji: "📱", text: "用美图秀秀拼个logo", scores: {tech: 0, chaos: 3, late: 0, narc: 1, team: 0} }
+                    { emoji: "👕", text: "设计精美，限量发售", scores: { tech: 1, chaos: 0, late: 1, narc: 2, team: 1 } },
+                    { emoji: "✏️", text: "自己画logo，丑也是特色", scores: { tech: 1, chaos: 2, late: 0, narc: 1, team: 1 } },
+                    { emoji: "🤷", text: "没有周边，懒得搞", scores: { tech: 0, chaos: 2, late: 0, narc: 0, team: 0 } },
+                    { emoji: "📱", text: "用美图秀秀拼个logo", scores: { tech: 0, chaos: 3, late: 0, narc: 1, team: 0 } }
                 ]
             }
         ];
@@ -786,7 +835,7 @@
                 emoji: "👔🎸",
                 subtitle: "这不是乐队，这是你的个人项目，队友是雇佣兵",
                 image: "images/boss.png",
-                description: "你是乐队的<strong>绝对领袖</strong>（自封的）。你写所有的歌��决定所有的编曲、控制所有的社交媒体，队友只是你实现音乐理想的<strong>工具人</strong>。你觉得队友技术不行、品味太差、理解不了你的艺术，但你还是'宽容地'让他们留在乐队。<br><br><strong>你的经典语录：</strong>\"这首歌必须按我的版本演...\" \"你们弹得不对，看我示范...\" \"这个乐队没我行，但我需要个鼓手...\"",
+                description: "你是乐队的<strong>绝对领袖</strong>（自封的）。你写所有的歌、决定所有的编曲、控制所有的社交媒体，队友只是你实现音乐理想的<strong>工具人</strong>。你觉得队友技术不行、品味太差、理解不了你的艺术，但你还是'宽容地'让他们留在乐队。<br><br><strong>你的经典语录：</strong>\"这首歌必须按我的版本演...\" \"你们弹得不对，看我示范...\" \"这个乐队没我行，但我需要个鼓手...\"",
                 warning: "队友正在密谋政变。建议：学会说'你觉得呢'，哪怕只是假装。",
                 condition: {
                     "narc": { "min": 18 },
@@ -886,7 +935,7 @@
                 emoji: "🤘🎸",
                 subtitle: "技术一般，但观众爱你，因为你会搞事情",
                 image: "images/6666.png",
-                description: "你是乐队的<strong>现场之王</strong>。你可能弹得不是最准的，唱得不是最好的，但观众就是爱你。你会跳下舞台、会互动、会讲段子、会在���上做俯卧撑。你是<strong>表演型人格</strong>的完美体现，队友的技术为你服务。<br><br><strong>你的经典语录：</strong>\"大家一起跳起来！\" \"下面那排，我看见你了！\" \"这段我要走到观众中间！\"",
+                description: "你是乐队的<strong>现场之王</strong>。你可能弹得不是最准的，唱得不是最好的，但观众就是爱你。你会跳下舞台、会互动、会讲段子、会在台上做俯卧撑。你是<strong>表演型人格</strong>的完美体现，队友的技术为你服务。<br><br><strong>你的经典语录：</strong>\"大家一起跳起来！\" \"下面那排，我看见你了！\" \"这段我要走到观众中间！\"",
                 warning: "队友觉得你在抢戏。建议：确保技术先过关，别在台上摔断腿。",
                 condition: {
                     "chaos": { "min": 18 },
@@ -953,7 +1002,7 @@
         ];
 
         let currentQuestion = 0;
-        let scores = {tech: 0, chaos: 0, late: 0, narc: 0, team: 0};
+        let scores = { tech: 0, chaos: 0, late: 0, narc: 0, team: 0 };
         let answers = [];
 
         function startTest() {
@@ -965,11 +1014,11 @@
         function renderQuestion() {
             const container = document.getElementById('questions-container');
             container.innerHTML = '';
-            
+
             const q = questions[currentQuestion];
             const card = document.createElement('div');
             card.className = 'question-card active';
-            
+
             let optionsHtml = '';
             q.options.forEach((opt, idx) => {
                 optionsHtml += `
@@ -979,15 +1028,15 @@
                     </div>
                 `;
             });
-            
+
             card.innerHTML = `
                 <div class="question-number">Question ${currentQuestion + 1} / 20</div>
                 <div class="question-text">${q.text}</div>
                 <div class="options">${optionsHtml}</div>
             `;
-            
+
             container.appendChild(card);
-            
+
             // 更新进度
             const progress = ((currentQuestion) / questions.length) * 100;
             document.getElementById('progress').style.width = progress + '%';
@@ -998,15 +1047,15 @@
             console.log('selectOption 被调用，题号:', currentQuestion, '选项:', idx);
             const q = questions[currentQuestion];
             const selected = q.options[idx];
-            
+
             // 累加分数
             for (let key in selected.scores) {
                 scores[key] += selected.scores[key];
             }
             console.log('当前分数:', scores);
-            
+
             answers.push(idx);
-            
+
             // 下一题或结束
             currentQuestion++;
             if (currentQuestion < questions.length) {
@@ -1023,7 +1072,7 @@
                 document.getElementById('test-section').classList.add('hidden');
                 document.getElementById('loading').classList.remove('hidden');
                 console.log('loading 页面已显示');
-                
+
                 setTimeout(() => {
                     console.log('开始计算结果...');
                     calculateResult();
@@ -1047,7 +1096,7 @@
             console.log('calculateResult 开始执行');
             console.log('scores:', scores);
             console.log('personalities:', personalities);
-            
+
             // 归一化分数到0-100
             const maxScore = 28 * 3; // 每题最高3分
             const normalized = {};
@@ -1055,11 +1104,11 @@
                 normalized[key] = Math.max(0, Math.min(100, Math.round((scores[key] / maxScore) * 100)));
             }
             console.log('normalized:', normalized);
-            
+
             // 确定人格类型
             let resultPersonality = null;
             let maxMatch = 0;
-            
+
             for (let p of personalities) {
                 if (checkCondition(p.condition, scores)) {
                     // 计算匹配度
@@ -1070,11 +1119,11 @@
                     }
                 }
             }
-            
+
             // 如果没有匹配到，找最接近的（默认ROOKIE）
             if (!resultPersonality) {
                 resultPersonality = personalities.find(p => p.id === 'rookie') || personalities[0];
-                
+
                 // 如果 personalities 数组为空，使用默认人格
                 if (!resultPersonality) {
                     resultPersonality = {
@@ -1089,31 +1138,31 @@
                 }
                 maxMatch = 85;
             }
-            
+
             console.log('resultPersonality:', resultPersonality);
-            
+
             // 显示结果
             try {
                 const loadingElement = document.getElementById('loading');
                 const resultElement = document.getElementById('result');
-                
+
                 // 强制隐藏 loading
                 loadingElement.style.display = 'none';
                 loadingElement.style.opacity = '0';
                 loadingElement.style.zIndex = '-1';
-                
+
                 // 强制显示 result
                 resultElement.style.display = 'block';
                 resultElement.style.opacity = '1';
                 resultElement.style.zIndex = '9999';
                 resultElement.style.position = 'relative';
                 resultElement.style.pointerEvents = 'auto';
-                
+
                 console.log('结果页面已显示');
-                
+
                 // 强制重绘
                 resultElement.offsetHeight; // 触发重排
-                
+
                 // 强制滚动到顶部
                 setTimeout(() => {
                     window.scrollTo({
@@ -1125,11 +1174,11 @@
             } catch (e) {
                 console.error('显示结果时出错:', e);
             }
-            
+
             // 显示图片（如果有）
             const imgElement = document.getElementById('result-img');
             const placeholderElement = document.getElementById('result-image-placeholder');
-            
+
             try {
                 if (resultPersonality.image) {
                     // 使用空src，避免加载本地文件
@@ -1146,41 +1195,42 @@
             } catch (e) {
                 console.error('显示图片时出错:', e);
             }
-            
+
             try {
                 document.getElementById('result-type').textContent = resultPersonality.name;
                 document.getElementById('result-subtitle').textContent = resultPersonality.subtitle;
                 document.getElementById('match-score').textContent = `匹配度 ${Math.round(maxMatch)}%`;
-                
+
                 // 填充维度条
                 document.getElementById('score-tech').textContent = normalized.tech + '%';
                 document.getElementById('bar-tech').style.width = normalized.tech + '%';
-                
+
                 document.getElementById('score-chaos').textContent = normalized.chaos + '%';
                 document.getElementById('bar-chaos').style.width = normalized.chaos + '%';
-                
+
                 document.getElementById('score-late').textContent = normalized.late + '%';
                 document.getElementById('bar-late').style.width = normalized.late + '%';
-                
+
                 document.getElementById('score-narc').textContent = normalized.narc + '%';
                 document.getElementById('bar-narc').style.width = normalized.narc + '%';
-                
+
                 document.getElementById('score-team').textContent = normalized.team + '%';
                 document.getElementById('bar-team').style.width = normalized.team + '%';
-                
+
                 document.getElementById('description-text').innerHTML = resultPersonality.description;
                 document.getElementById('warning-text').textContent = resultPersonality.warning;
-                
+
                 console.log('所有结果数据已填充');
             } catch (e) {
                 console.error('填充结果数据时出错:', e);
             }
-            
+
             // 滚动到顶部
             window.scrollTo(0, 0);
         }
-        
+
 
     </script>
 </body>
+
 </html>
