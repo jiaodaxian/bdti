@@ -442,7 +442,7 @@
         <div id="result" class="result-container hidden">
             <div class="result-header" style="position: relative;">
                 <div class="qr-code" style="position: absolute; top: 20px; right: 20px; width: 80px; height: 80px; background: white; padding: 8px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 1000;">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=bdti.asia" alt="QR Code" style="width: 100%; height: 100%;">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https://bdti.asia/" alt="QR Code" style="width: 100%; height: 100%;">
                     <div style="position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); font-size: 0.7rem; color: #ffbe0b; text-align: center; white-space: nowrap;">扫码测试</div>
                 </div>
                 <div class="result-image" id="result-image" style="width: 200px; height: 200px; margin: 0 auto 20px; border-radius: 50%; overflow: hidden; border: 4px solid rgba(255,190,11,0.5); background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center;">
@@ -736,8 +736,8 @@
                 description: "你是乐队的<strong>技术天花板</strong>，也是<strong>社交地下室</strong>。你能弹所有风格的solo，记得住所有复杂的拍号，但你可能太专注于技术而忘了音乐是用来享受的。队友既崇拜你又害怕你，因为你总是说'这段很简单啊'。<br><br><strong>你的经典语录：</strong>\"这个拍号是13/8，很简单啊...\" \"你们先排，我去看会儿谱...\" \"这个音阶我6岁就练熟了...\"",
                 warning: "你可能会因为太追求完美而找不到队友。建议：偶尔弹错几个音，让队友感觉好一点。",
                 condition: {
-                    "tech": { "min": 25 },
-                    "chaos": { "max": 10 }
+                    "tech": { "min": 20 },
+                    "chaos": { "max": 15 }
                 }
             },
             {
@@ -917,9 +917,9 @@
                 description: "你是乐队的<strong>CEO</strong>。你有详细的五年计划，每天发10条排练提醒，凌晨3点还在改歌。你把乐队当公司经营，队友是你的员工，演出是你的业绩。你可能会成功，也可能会累死。<br><br><strong>你的经典语录：</strong>\"我们需要KPI...\" \"这个月演出量不够...\" \"周末加排，大家都到...\"",
                 warning: "你正在失去生活。建议：偶尔休息，别把乐队变成第二份工作。",
                 condition: {
-                    "tech": { "min": 22 },
-                    "team": { "min": 18 },
-                    "late": { "max": 5 }
+                    "tech": { "min": 18 },
+                    "team": { "min": 15 },
+                    "late": { "max": 10 }
                 }
             },
             {
@@ -945,291 +945,9 @@
                 description: "你是乐队的<strong>质量控制官</strong>。你会为了一个音符练100遍，会因为一个错音重排整个段落，会在演出前紧张到呕吐。你的演出永远不会出错，但也永远不会有惊喜。你是技术的典范，也是队友的噩梦。<br><br><strong>你的经典语录：</strong>\"这里错了，再来一遍...\" \"这个音色不对...\" \"我们还没准备好，取消演出...\"",
                 warning: "你可能会把队友逼疯。建议：偶尔接受不完美，音乐是有灵魂的。",
                 condition: {
-                    "tech": { "min": 25 },
-                    "chaos": { "max": 8 },
-                    "late": { "max": 5 }
-                }
-            },
-            // 新增人格类型
-            {
-                id: "foodie",
-                name: "FOODIE美食家",
-                emoji: "🍔🎸",
-                subtitle: "演出是副业，找好吃的才是主业",
-                image: "images/foodie.png",
-                description: "你是乐队的<strong>美食侦察兵</strong>。无论去哪里演出，你都能找到当地最地道的美食。排练时你带零食，演出后你带大家去吃夜宵，你的背包里永远有各种小吃。音乐对你来说只是找美食的借口。<br><br><strong>你的经典语录：</strong>"这家店的烧烤超赞..." "排练完去吃火锅吧..." "演出费？先留着吃饭..."",
-                warning: "你可能会胖到穿不下演出服。建议：偶尔控制点，别在台上吃汉堡。",
-                condition: {
-                    "chaos": { "min": 10 },
-                    "team": { "min": 15 },
-                    "narc": { "max": 10 }
-                }
-            },
-            {
-                id: "memelord",
-                name: "MEMELORD梗王",
-                emoji: "😂🎸",
-                subtitle: "玩乐队就是为了玩梗，音乐只是载体",
-                image: "images/memelord.png",
-                description: "你是乐队的<strong>表情包库</strong>。你会把流行梗融入歌词，会在演出时突然说段子，会把排练过程做成搞笑视频。你的歌可能不红，但你的梗一定会火。<br><br><strong>你的经典语录：</strong>"这个梗能写进歌里..." "刚才那个画面太有梗了..." "我们应该做个鬼畜视频..."",
-                warning: "队友担心你把乐队变成喜剧团体。建议：偶尔认真玩一次音乐，证明你不是只会玩梗。",
-                condition: {
-                    "chaos": { "min": 18 },
-                    "narc": { "min": 10 },
-                    "tech": { "max": 15 }
-                }
-            },
-            {
-                id: "vlogger",
-                name: "VLOGGER视频博主",
-                emoji: "📹🎸",
-                subtitle: "乐队是我的内容素材库",
-                image: "images/vlogger.png",
-                description: "你是乐队的<strong>记录者</strong>。你随时随地都在拍视频，排练、演出、吃饭、甚至吵架都被你拍成vlog。你比关心音乐更关心视频的点赞数，你的粉丝可能比乐队的粉丝还多。<br><br><strong>你的经典语录：</strong>"这个角度拍出来超好看..." "刚才那个瞬间一定要剪进去..." "我们上热门了！"",
-                warning: "队友觉得你把他们当演员。建议：偶尔放下相机，享受音乐本身。",
-                condition: {
-                    "narc": { "min": 15 },
-                    "chaos": { "min": 10 },
-                    "team": { "max": 15 }
-                }
-            },
-            {
-                id: "nerd",
-                name: "NERD技术宅",
-                emoji: "🤓🎸",
-                subtitle: "用代码写歌，用算法编曲",
-                image: "images/nerd.png",
-                description: "你是乐队的<strong>技术顾问</strong>。你会用编程生成旋律，会用算法分析听众喜好，会用数据分析演出效果。你可能不会弹复杂的solo，但你能让乐队的每首歌都精准命中听众的G点。<br><br><strong>你的经典语录：</strong>"我写了个脚本分析热门歌曲..." "这个和弦进行的大数据表现不错..." "我们需要A/B测试这首歌..."",
-                warning: "队友觉得你把音乐变得太冰冷。建议：偶尔用感觉写歌，别全靠数据。",
-                condition: {
                     "tech": { "min": 20 },
-                    "narc": { "max": 12 },
-                    "chaos": { "max": 10 }
-                }
-            },
-            {
-                id: "hipster",
-                name: "HIPSTER潮人",
-                emoji: "🕶️🎸",
-                subtitle: "乐队是我的时尚秀场",
-                image: "images/hipster.png",
-                description: "你是乐队的<strong>时尚总监</strong>。你永远穿着最潮的衣服，留着最酷的发型，用着最限量的设备。你觉得乐队的形象比音乐更重要，你的演出服可能比你的乐器还贵。<br><br><strong>你的经典语录：</strong>"这个发型配这首歌超搭..." "我的新靴子到了，演出要穿..." "我们的乐队形象需要升级..."",
-                warning: "队友觉得你把钱都花在衣服上了。建议：偶尔买个好点的设备，别总买衣服。",
-                condition: {
-                    "narc": { "min": 18 },
-                    "tech": { "max": 15 },
-                    "chaos": { "max": 15 }
-                }
-            },
-            {
-                id: "metalhead",
-                name: "METALHEAD金属党",
-                emoji: "🤘🔥",
-                subtitle: "音量要大，riff要重，头发要长",
-                image: "images/metalhead.png",
-                description: "你是乐队的<strong>重金属担当</strong>。你觉得音乐就是要够重、够噪、够快。你留着长发，穿黑衣服，喜欢甩头，你的solo永远充满力量。你可能听不懂其他风格的音乐，但你觉得那都不重要。<br><br><strong>你的经典语录：</strong>"音量不够大..." "这个riff不够重..." "我们需要更躁一点..."",
-                warning: "队友担心你的听力会受损。建议：偶尔听点轻音乐，保护耳朵。",
-                condition: {
-                    "tech": { "min": 18 },
-                    "chaos": { "min": 15 },
-                    "narc": { "max": 15 }
-                }
-            },
-            {
-                id: "ballad",
-                name: "BALLAD情歌王子",
-                emoji: "💔🎸",
-                subtitle: "所有歌都是情歌，所有演出都是疗伤现场",
-                image: "images/ballad.png",
-                description: "你是乐队的<strong>情感导师</strong>。你写的每首歌都是情歌，你唱的每个字都充满深情。你能让观众在演出时哭成一片，你的歌可能会成为很多人的情感寄托。<br><br><strong>你的经典语录：</strong>"这首歌是我为她写的..." "这段旋律能打动人心..." "演出时要营造悲伤的氛围..."",
-                warning: "队友觉得你的歌太矫情。建议：偶尔写首快歌，让大家嗨一下。",
-                condition: {
-                    "narc": { "min": 15 },
-                    "team": { "min": 10 },
-                    "chaos": { "max": 10 }
-                }
-            },
-            {
-                id: "punk",
-                name: "PUNK朋克青年",
-                emoji: "👢🎸",
-                subtitle: "反抗一切，包括自己的乐队",
-                image: "images/punk.png",
-                description: "你是乐队的<strong>叛逆分子</strong>。你觉得规则就是用来打破的，权威就是用来挑战的。你穿破洞衣服，留莫西干头，你的歌充满愤怒和反抗。你可能会和队友吵架，但那只是因为你太有态度。<br><br><strong>你的经典语录：</strong>"这规则太傻逼了..." "我们要反抗权威..." "去他妈的主流音乐..."",
-                warning: "队友担心你会把乐队搞散。建议：偶尔妥协一下，别什么都反抗。",
-                condition: {
-                    "chaos": { "min": 20 },
-                    "narc": { "min": 15 },
-                    "team": { "max": 10 }
-                }
-            },
-            {
-                id: "jazz",
-                name: "JAZZ爵士大师",
-                emoji: "🎷🎸",
-                subtitle: "即兴是灵魂，复杂是艺术",
-                image: "images/jazz.png",
-                description: "你是乐队的<strong>即兴大师</strong>。你觉得音乐就是要自由，就是要即兴。你能在任何歌曲里加入爵士元素，你的solo永远让人意想不到。你可能觉得其他风格的音乐太简单、太无聊。<br><br><strong>你的经典语录：</strong>"我们来即兴一段..." "这个和弦可以替换成属七..." "音乐要自由，不要拘束..."",
-                warning: "队友觉得你的即兴太长了。建议：偶尔弹点简单的东西，让大家跟得上。",
-                condition: {
-                    "tech": { "min": 20 },
-                    "chaos": { "min": 15 },
-                    "narc": { "max": 15 }
-                }
-            },
-            {
-                id: "pop",
-                name: "POP流行达人",
-                emoji: "🎵🎸",
-                subtitle: "旋律要洗脑，歌词要简单，演出要热闹",
-                image: "images/pop.png",
-                description: "你是乐队的<strong>流行风向标</strong>。你觉得音乐就是要让人喜欢，就是要流行。你写的歌旋律洗脑，歌词简单，演出时充满互动。你可能觉得其他风格的音乐太复杂、太小众。<br><br><strong>你的经典语录：</strong>"这个旋律不够洗脑..." "歌词要更简单点..." "我们需要更热闹的演出..."",
-                warning: "队友觉得你的歌太商业化。建议：偶尔写首有深度的歌，证明你不是只会写流行歌。",
-                condition: {
-                    "team": { "min": 15 },
-                    "narc": { "min": 10 },
-                    "tech": { "max": 15 }
-                }
-            },
-            {
-                id: "classical",
-                name: "CLASSICAL古典学霸",
-                emoji: "🎼🎸",
-                subtitle: "用古典音乐的标准要求流行乐队",
-                image: "images/classical.png",
-                description: "你是乐队的<strong>音乐教授</strong>。你有古典音乐背景，对音乐理论了如指掌。你觉得音乐就是要严谨，就是要符合理论。你可能会对队友的演奏提出很高的要求，你的编曲可能会融入古典元素。<br><br><strong>你的经典语录：</strong>"这个和声进行不符合理论..." "你的节奏不准..." "我们可以加入赋格手法..."",
-                warning: "队友觉得你太死板了。建议：偶尔放松一下，音乐不一定要完全符合理论。",
-                condition: {
-                    "tech": { "min": 22 },
-                    "chaos": { "max": 8 },
-                    "narc": { "max": 15 }
-                }
-            },
-            {
-                id: "country",
-                name: "COUNTRY乡村歌手",
-                emoji: "🤠🎸",
-                subtitle: "音乐要接地气，歌词要讲故事",
-                image: "images/country.png",
-                description: "你是乐队的<strong>乡村灵魂</strong>。你觉得音乐就是要真实，就是要讲生活故事。你喜欢弹木吉他，你的歌充满乡村气息，你的演出就像在朋友家的客厅里一样亲切。<br><br><strong>你的经典语录：</strong>"这首歌是我在农场写的..." "音乐要接地气..." "我们需要更真实的情感..."",
-                warning: "队友觉得你的歌太土了。建议：偶尔尝试点新风格，别总局限在乡村。",
-                condition: {
-                    "team": { "min": 18 },
-                    "chaos": { "max": 12 },
-                    "narc": { "max": 12 }
-                }
-            },
-            {
-                id: "edm",
-                name: "EDM电音高手",
-                emoji: "⚡🎸",
-                subtitle: "音乐要嗨，节奏要稳，效果要炫",
-                image: "images/edm.png",
-                description: "你是乐队的<strong>电音专家</strong>。你觉得音乐就是要让人跳舞，就是要嗨。你会用各种效果器，你的歌充满电子元素，你的演出就像一场电音节。<br><br><strong>你的经典语录：</strong>"这个drop不够炸..." "我们需要更嗨的节奏..." "效果器要调得更炫..."",
-                warning: "队友觉得你的音乐太吵了。建议：偶尔做首慢歌，让大家休息一下。",
-                condition: {
-                    "tech": { "min": 18 },
-                    "chaos": { "min": 15 },
-                    "narc": { "min": 10 }
-                }
-            },
-            {
-                id: "folk",
-                name: "FOLK民谣诗人",
-                emoji: "🌿🎸",
-                subtitle: "音乐要纯粹，歌词要深刻",
-                image: "images/folk.png",
-                description: "你是乐队的<strong>民谣诗人</strong>。你觉得音乐就是要纯粹，就是要表达真实的情感。你喜欢弹木吉他，你的歌充满诗意，你的演出就像在讲述一个个故事。<br><br><strong>你的经典语录：</strong>"这首歌是我在旅行中写的..." "音乐要纯粹，不要太多效果..." "歌词要更深刻一点..."",
-                warning: "队友觉得你的歌太闷了。建议：偶尔写首快歌，让大家动起来。",
-                condition: {
-                    "team": { "min": 15 },
                     "chaos": { "max": 10 },
-                    "narc": { "max": 12 }
-                }
-            },
-            {
-                id: "rappers",
-                name: "RAPPER说唱歌手",
-                emoji: "🎤🔥",
-                subtitle: "节奏要快，押韵要准，flow要炸",
-                image: "images/rapper.png",
-                description: "你是乐队的<strong>说唱担当</strong>。你觉得音乐就是要表达，就是要押韵。你会在歌里加入说唱元素，你的flow流畅，你的歌词充满态度。你可能觉得其他风格的音乐不够有力量。<br><br><strong>你的经典语录：</strong>"这个beat不够炸..." "我的flow要更流畅..." "歌词要更有态度..."",
-                warning: "队友觉得你抢了太多风头。建议：偶尔让其他成员表现一下，别总是自己说唱。",
-                condition: {
-                    "narc": { "min": 18 },
-                    "chaos": { "min": 15 },
-                    "tech": { "max": 15 }
-                }
-            },
-            {
-                id: "producer",
-                name: "PRODUCER制作人",
-                emoji: "🎛️🎸",
-                subtitle: "录音室是我的主场，现场演出只是副业",
-                image: "images/producer.png",
-                description: "你是乐队的<strong>幕后英雄</strong>。你更擅长在录音室里工作，你会混音、会母带处理、会制作。你可能在现场演出时表现一般，但你的制作能力能让乐队的作品听起来专业很多。<br><br><strong>你的经典语录：</strong>"这个混音需要调整..." "我们需要在录音室多花点时间..." "现场演出？我更擅长录音..."",
-                warning: "队友觉得你在现场不够投入。建议：偶尔在现场多表现一下，别总是想着录音。",
-                condition: {
-                    "tech": { "min": 20 },
-                    "narc": { "max": 10 },
-                    "chaos": { "max": 12 }
-                }
-            },
-            {
-                id: "manager",
-                name: "MANAGER经纪人",
-                emoji: "📋🎸",
-                subtitle: "乐队的大脑，负责所有非音乐的事情",
-                image: "images/manager.png",
-                description: "你是乐队的<strong>大管家</strong>。你负责联系演出、处理合同、管理财务、推广宣传。你可能不是最会玩音乐的，但你是乐队不可或缺的存在。没有你，乐队可能连演出都找不到。<br><br><strong>你的经典语录：</strong>"我们需要更多演出机会..." "这个合同条款有问题..." "我们的社交媒体需要更新..."",
-                warning: "队友觉得你管得太多了。建议：偶尔放松一下，让大家自由发挥。",
-                condition: {
-                    "team": { "min": 20 },
-                    "tech": { "max": 15 },
-                    "narc": { "max": 10 }
-                }
-            },
-            {
-                id: "groupie",
-                name: "GROUPIE追星族",
-                emoji: "🤩🎸",
-                subtitle: "加入乐队是为了接近偶像，音乐只是附带",
-                image: "images/groupie.png",
-                description: "你是乐队的<strong>粉丝代表</strong>。你加入乐队不是因为喜欢玩音乐，而是因为喜欢某个乐队成员，或者想接近其他乐队。你可能技术一般，但你对音乐圈的八卦了如指掌。<br><br><strong>你的经典语录：</strong>"那个乐队的主唱超帅..." "我们什么时候能和他们演出..." "我昨天看到XX乐队的鼓手了..."",
-                warning: "队友觉得你不是真的喜欢音乐。建议：真正投入到音乐中，别总是想着追星。",
-                condition: {
-                    "narc": { "min": 15 },
-                    "team": { "max": 10 },
-                    "tech": { "max": 12 }
-                }
-            },
-            {
-                id: "retired",
-                name: "RETIRED退休乐手",
-                emoji: "👴🎸",
-                subtitle: "曾经辉煌过，现在只是玩票",
-                image: "images/retired.png",
-                description: "你是乐队的<strong>老前辈</strong>。你曾经在某个乐队里红过，现在只是想找个地方玩音乐。你有丰富的经验，你的故事能让年轻队员受益匪浅。你可能技术不如从前，但你的态度和经验是乐队的宝贵财富。<br><br><strong>你的经典语录：</strong>"想当年我们那个乐队..." "这个我以前玩过..." "年轻人，别太急功近利..."",
-                warning: "队友觉得你总活在过去。建议：偶尔接受新事物，别总提当年。",
-                condition: {
-                    "tech": { "min": 15 },
-                    "team": { "min": 18 },
-                    "chaos": { "max": 12 }
-                }
-            },
-            {
-                id: "casual",
-                name: "CASUAL casual玩家",
-                emoji: "😎🎸",
-                subtitle: "玩乐队只是爱好，别太认真",
-                image: "images/casual.png",
-                description: "你是乐队的<strong>轻松担当</strong>。你玩乐队只是因为喜欢，不想把它当成事业。你不追求成名，不追求赚钱，只是想和朋友一起玩音乐。你可能技术一般，但你能让乐队的氛围变得轻松愉快。<br><br><strong>你的经典语录：</strong>"玩得开心就好..." "别太认真，只是爱好..." "我们去喝一杯吧..."",
-                warning: "队友觉得你不够投入。建议：偶尔认真一下，别总是无所谓。",
-                condition: {
-                    "team": { "min": 15 },
-                    "chaos": { "max": 15 },
-                    "narc": { "max": 10 },
-                    "tech": { "max": 15 }
+                    "late": { "max": 10 }
                 }
             }
         ];
